@@ -24,11 +24,11 @@ TARGET_FLATTEN_APEX := false
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/product,product) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/root,recovery/root) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/permissions,product/etc/permissions) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/motorola/def/prebuilt/permissions,system/etc/permissions)
+    $(call find-copy-subdir-files,*,device/motorola/nairo/prebuilt/product,product) \
+    $(call find-copy-subdir-files,*,device/motorola/nairo/prebuilt/root,recovery/root) \
+    $(call find-copy-subdir-files,*,device/motorola/nairo/prebuilt/permissions,product/etc/permissions) \
+    $(call find-copy-subdir-files,*,device/motorola/nairo/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/motorola/nairo/prebuilt/permissions,system/etc/permissions)
 
 PRODUCT_PACKAGES += fstab.qcom
 
@@ -67,7 +67,7 @@ PRODUCT_PACKAGES_DEBUG += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl.recovery \
-    bootctrl.sm6150.recovery \
+    bootctrl.lito.recovery \
     fastbootd
 
 PRODUCT_PACKAGES_DEBUG += \
@@ -103,10 +103,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     SnapdragonCamera2
-
-# ANT+
-#PRODUCT_PACKAGES += \
-#    AntHalService
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -167,21 +163,14 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi@1.0
-#    android.hardware.vibrator@1.2-service.oneplus7pro
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
 
-#PRODUCT_BOOT_JARS += \
-#    com.nxp.nfc \
-#    tcmiface \
-#    WfdCommon \
-#    qcnvitems
-
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
-    device/motorola/def/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
+    device/motorola/nairo/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
 
 # Temporary handling
 #
@@ -189,8 +178,8 @@ PRODUCT_COPY_FILES += \
 # does not exist as they are mutually exclusive.  Once all target's android_filesystem_config.h
 # have been removed, TARGET_FS_CONFIG_GEN should be made unconditional.
 DEVICE_CONFIG_DIR := $(dir $(firstword $(subst ]],, $(word 2, $(subst [[, ,$(_node_import_context))))))
-ifeq ($(wildcard device/motorola/def/android_filesystem_config.h),)
-  TARGET_FS_CONFIG_GEN := device/motorola/def/config.fs
+ifeq ($(wildcard device/motorola/nairo/android_filesystem_config.h),)
+  TARGET_FS_CONFIG_GEN := device/motorola/nairo/config.fs
 else
   $(warning **********)
   $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)
