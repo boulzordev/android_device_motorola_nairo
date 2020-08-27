@@ -419,7 +419,7 @@ product/etc/nfcee_access.xml
 product/lib/libdiag_system.so
 product/lib64/libdiag_system.so
 
--product/app/Nfc_st/Nfc_st.apk|2a2de6cca6a7c759632d6aee17eca8f23752f060
+-product/app/Nfc_st/Nfc_st.apk|626905c02fca227287ba6c16e70182191a1df179
 product/lib64/libnfc_st_dta.so
 product/lib/libnfc_st_dta.so
 product/lib64/libnfc_st_dta_jni.so
