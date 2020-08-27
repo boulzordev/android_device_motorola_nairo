@@ -55,7 +55,7 @@ BOARD_USES_RECOVERY_AS_BOOT := false
 TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/def/overlay/device
+DEVICE_PACKAGE_OVERLAYS += device/motorola/nairo/overlay/device
 DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
 
 # Inherit from our custom product configuration
