@@ -442,7 +442,7 @@ product/etc/sysconfig/whitelist_com.motorola.omadm.vzw.xml
 -product/framework/com.motorola.imager.foles.jar
 
 -product/priv-app/atfwd/atfwd.apk
--product/priv-app/MotoFpsTouch/MotoFpsTouch.apk
+-product/priv-app/MotoFpsTouch/MotoFpsTouch.apk|cd84e965255f53cef2ae54191c4e01ebfbb61e2b
 -product/priv-app/WavesService/WavesService.apk
 -product/app/MotoWaves/MotoWaves.apk
 -product/priv-app/DMService/DMService.apk
