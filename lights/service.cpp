@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.def"
+#define LOG_TAG "android.hardware.light@2.0-service.nairo"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
@@ -41,7 +41,10 @@ int main() {
         return 1;
     }
 
+    LOG(ERROR) << "Light HAL service ready.";
+    LOG(VERBOSE) << "Light HAL service ready.";
     LOG(INFO) << "Light HAL service ready.";
+    LOG(WARNING) << "Light HAL service ready.";
 
     joinRpcThreadpool();
 
