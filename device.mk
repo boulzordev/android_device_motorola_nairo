@@ -92,13 +92,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.verified_boot.xml
 
-PRODUCT_AAPT_CONFIG := xxxhdpi
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.def
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -162,7 +158,8 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_video.xml
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.wifi@1.0
+    vendor.qti.hardware.wifi@1.0 \
+    android.hardware.light@2.0-service.nairo
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
