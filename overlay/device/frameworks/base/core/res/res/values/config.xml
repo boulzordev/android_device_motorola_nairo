@@ -110,7 +110,7 @@
     <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
     <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
     <string name="wifi_tether_configure_ssid_default">moto g 5G plus</string>
-    <integer name="config_screenBrightnessSettingMaximum">256</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
     <bool name="config_allowAutoBrightnessWhileDozing">false</bool>
     <integer-array name="config_autoBrightnessDisplayValuesNits">
         <item>3</item>
@@ -202,7 +202,6 @@
     </string-array>
 
     <integer-array name="config_screenBrightnessBacklight">
-        <item>0</item>
         <item>1</item>
         <item>5</item>
         <item>11</item>
@@ -223,7 +222,6 @@
     </integer-array>
 
     <integer-array name="config_screenBrightnessNits">
-        <item>0</item>
         <item>3</item>
         <item>10</item>
         <item>20</item>
@@ -315,4 +313,5 @@
 
     <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">90</integer>
+
 </resources>
