@@ -2,6 +2,8 @@ on init
     mount none /dev/null /vendor/overlay/SystemUIAttOverlay/SystemUIAttOverlay.apk bind
     mount none /dev/null /vendor/overlay/SystemUISprintOverlay/SystemUISprintOverlay.apk bind
     mount none /dev/null /vendor/overlay/SystemUITmoOverlay/SystemUITmoOverlay.apk bind
+    mount none /dev/null /vendor/overlay/TelephonyResCommonQcom.apk bind
+    mount none /dev/null /vendor/overlay/TelephonyResMotCommon.apk bind
     mount none /dev/null /vendor/overlay/framework-res__auto_generated_rro_vendor.apk bind
     setprop ro.carrier ${ro.boot.carrier}
     setprop ro.vendor.carrier ${ro.boot.carrier}
