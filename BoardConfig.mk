@@ -130,6 +130,9 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery_dynamic_partition.fstab
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_nairo
+
 # Split selinux policy
 PRODUCT_SEPOLICY_SPLIT := true
 
