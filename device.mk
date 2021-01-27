@@ -105,6 +105,13 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     SnapdragonCamera2
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
